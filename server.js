@@ -2,7 +2,7 @@ const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
 
-// const  = require(''); router
+const recipeRouter = require('./router/recipe-router.js');
 
 const server = express();
 
@@ -10,6 +10,8 @@ server.use(express.json());
 server.use(helmet());
 server.use(cors());
 server.use(logger)
+
+server.use('/api/recipes', recipeRouter);
 
 function logger(req, res, next) {
     const method = req.method;
