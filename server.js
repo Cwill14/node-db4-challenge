@@ -19,4 +19,8 @@ function logger(req, res, next) {
     next()
 };
 
+server.get('/', (req, res) => {
+    res.status(200).json({ Dustin: "it's working!" })
+});
+
 module.exports = server;
