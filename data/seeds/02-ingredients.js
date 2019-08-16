@@ -10,6 +10,7 @@ exports.seed = function(knex, Promise) {
   //       {id: 3, colName: 'rowValue3'}
   //     ]);
   //   });
+  // return knex('ingredients')
   return knex('ingredients').insert([
     { ingredient_name: 'cereal of choice' },
     { ingredient_name: 'milk' },

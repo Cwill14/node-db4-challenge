@@ -12,9 +12,9 @@ exports.seed = function(knex, Promise) {
   //       {id: 3, colName: 'rowValue3'}
   //     ]);
   //   });
-  return knex('recipes').insert([
-    { recipe_name: 'Cereal' },
-    { recipe_name: 'Idiot Sandwich' },
-    { recipe_name: 'Clark Special' }
-  ])
+    return knex('recipes').insert([
+      { recipe_name: 'Cereal' },
+      { recipe_name: 'Idiot Sandwich' },
+      { recipe_name: 'Clark Special' }
+    ])
 };

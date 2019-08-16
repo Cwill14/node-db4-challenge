@@ -16,15 +16,15 @@ function getRecipes() {
 
 function getShoppingList(id) {
     return db('ingredients as i')
-        .innerJoin('recipe_ingredients as ri', 'ri.recipe_id', '=', id)
+        .innerJoin('recipe_ingredients as ri', 'ri.ingredient_id', '=', 'i.id')
         .select('i.ingredient_name', 'ri.quantity')
-        .where('ri.ingredient_id', '=', 'i.id')
+        .where('ri.recipe_id', '=', id)
 }
 
 function getInstructions(id) {
-    return db('instructions as i')
-        .innerJoin('recipes as r', 'r.id', '=', id)
-        .select('i.step_number', 'i.step_description')
-        .where('i.recipe_id', '=', 'r.id')
-        .orderBy('i.step_number')
+    return db('banana')
+        // .innerJoin('recipes as r', 'i.recipe_id', '=', 'r.id')
+        // .select('i.step_number', 'i.step_description')
+        // .where('r.id', '=', id)
+        // .orderBy('i.step_number')
 }

@@ -10,6 +10,7 @@ exports.seed = function(knex) {
   //       {id: 3, colName: 'rowValue3'}
   //     ]);
   //   });
+
   return knex('instructions').insert([
     { recipe_id: '1', step_number: '1', step_description: 'gather bowl, spoon, milk, and cereal' },
     { recipe_id: '1', step_number: '2', step_description: 'pour cereal into bowl' },
